@@ -26,8 +26,41 @@ def read_data(filename):
                 }
                 counter += 1
 
+        if counter <= 10:
             raise ValueError("El archivo tiene menos de 10 líneas con valores en todos los atributos. Revise su contenido.")
             
     return data_dict
+
+
+def read_data(filename):
+
+
+
+
+
+def split(data):
+    white_data_dict = {}
+    red_data_dict = {}
+    
+    for key, value in data.items():
+        if value type == 'white'
+            white_data_dict = value
+        elif value type == 'red'
+    
+     return white_data_dict, red_data_dict
+
+#Manera tradicional
+#resultado = []
+#for i in valores:
+ # resultado.append(i * 2)
+#print(resultado)
+
+
+def reduce(data, attribute):
+    result = []
+     for data in data.values():
+         result.append(attribute)
+         if
+     return result
 
 
