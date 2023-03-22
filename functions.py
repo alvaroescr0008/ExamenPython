@@ -43,9 +43,9 @@ def split(data):
     red_data_dict = {}
     
     for key, value in data.items():
-        if value type == 'white'
+        if value (type) == 'white'
             white_data_dict = value
-        elif value type == 'red'
+        elif value (type) == 'red'
     
      return white_data_dict, red_data_dict
 
@@ -60,7 +60,7 @@ def reduce(data, attribute):
     result = []
      for data in data.values():
          result.append(attribute)
-         if
+         #poner lo del valuerrorrrrrrrrrrrrrrrrr
      return result
 
 
