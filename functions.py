@@ -1,15 +1,16 @@
 import csv
 
 def read_data(filename):
+    
     data_dict = {}
     counter = 1
-    
+
     with open(filename, 'r') as file:
         reader = csv.reader(file)
-        
+
         for row in reader:
-            if '' not in row:
-                data_dict['dato' + str(counter)] = {
+            if all(row): 
+                data_dict[f'dato{counter}'] = {
                     'fixed acidity': float(row[0]),
                     'volatile acidity': float(row[1]),
                     'citric acid': float(row[2]),
@@ -23,7 +24,10 @@ def read_data(filename):
                     'alcohol': float(row[10]),
                     'quality': int(row[11])
                 }
-                
                 counter += 1
-                
+
+            raise ValueError("El archivo tiene menos de 10 líneas con valores en todos los atributos. Revise su contenido.")
+            
     return data_dict
+
+
