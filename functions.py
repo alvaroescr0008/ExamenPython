@@ -1,23 +1,29 @@
-def read_data(list):
- 
-  return max
+import csv
 
-
-
-
-
-f = open("fichero.txt", mode="rt", encoding="utf-8")
-
-#leemos 10 caracteres
-texto = f.read(10)
-print("Leemos 10 caracteres: "+texto)
-
-pos = f.tell()
-print("La posición actual del puntero es ", pos)
-
-#movemos el puntero al inicio y volvemos a leer
-f.seek(0)
-texto = f.read(10)
-print("Volvemos a leer: "+texto)
-
-f.close()
+def read_data(filename):
+    data_dict = {}
+    counter = 1
+    
+    with open(filename, 'r') as file:
+        reader = csv.reader(file)
+        
+        for row in reader:
+            if '' not in row:
+                data_dict['dato' + str(counter)] = {
+                    'fixed acidity': float(row[0]),
+                    'volatile acidity': float(row[1]),
+                    'citric acid': float(row[2]),
+                    'residual sugar': float(row[3]),
+                    'chlorides': float(row[4]),
+                    'free sulfur dioxide': float(row[5]),
+                    'total sulfur dioxide': float(row[6]),
+                    'density': float(row[7]),
+                    'PH': float(row[8]),
+                    'sulphates': float(row[9]),
+                    'alcohol': float(row[10]),
+                    'quality': int(row[11])
+                }
+                
+                counter += 1
+                
+    return data_dict
