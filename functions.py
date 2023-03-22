@@ -71,3 +71,6 @@ def silhouette(lista1, lista2):
 
     total = sum(lista1)
     return total/len(lista1)
+
+
+
