@@ -10,6 +10,9 @@ data_dict = read_data('winequality.csv')
 data_dict = read_data('winequality.csv')
 white_data_dict, red_data_dict = split(data_dict)
 
+print(f"{len(white_data_dict)} blanco {len(red_data_dict)} rojo")
+
+print(white_data_dict['dato1'])
 
 #read_data main
 data2_dict = read_data('winequality.csv')

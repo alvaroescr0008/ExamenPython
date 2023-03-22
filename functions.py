@@ -53,14 +53,21 @@ def split(data):
 #resultado = []
 #for i in valores:
  # resultado.append(i * 2)
-#print(resultado)
-
+#print(resultado) 
 
 def reduce(data, attribute):
-    result = []
-     for data in data.values():
-         result.append(attribute)
-         #poner lo del valuerrorrrrrrrrrrrrrrrrr
-     return result
+    if attribute not in list(data['dato1']):
+        raise ValueError(f"No existe en el diccionario")
 
 
+        result = []
+        for data in data.values():
+            result.append(attribute)
+            
+        return result
+
+
+def silhouette(lista1, lista2):
+
+    total = sum(lista1)
+    return total/len(lista1)
